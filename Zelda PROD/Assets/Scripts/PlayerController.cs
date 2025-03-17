@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            anim.SetTrigger("Attack");
+        }
+
         direction = new Vector3(horizontal,0,vertical).normalized;
 
         if(direction.magnitude > 0.1f)
