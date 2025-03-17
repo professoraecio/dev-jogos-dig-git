@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Animator anim;
+    private bool isWalk;
     private CharacterController controller;
     [Header("Config Player")]
     public float movementSpeed = 3f;
@@ -12,6 +14,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,8 +28,14 @@ public class PlayerController : MonoBehaviour
         {
             float targetAngle = Mathf.Atan2(direction.x,direction.z) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0,targetAngle,0);
+            isWalk = true;
+        }
+        else
+        {
+            isWalk = false;
         }
 
         controller.Move(direction * movementSpeed * Time.deltaTime);
+        anim.SetBool("isWalk",isWalk);
     }
 }
