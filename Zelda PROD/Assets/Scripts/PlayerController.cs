@@ -10,9 +10,10 @@ public class PlayerController : MonoBehaviour
     [Header("Config Player")]
     public float movementSpeed = 3f;
     private Vector3 direction;
+    private float horizontal;
+    private float vertical;
     // Start is called before the first frame update
-    [Header("Camera")]
-    public GameObject camB;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -22,14 +23,30 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+
+        Inputs();
+
+        MoveCharacter();
+
+        UpdateAnimator();
+        
+    }
+
+    #region MEUS MÉTODOS
+
+    void Inputs()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        vertical = Input.GetAxis("Vertical");
 
         if(Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("Attack");
         }
+    }
 
+    void MoveCharacter()
+    {
         direction = new Vector3(horizontal,0,vertical).normalized;
 
         if(direction.magnitude > 0.1f)
@@ -44,28 +61,15 @@ public class PlayerController : MonoBehaviour
         }
 
         controller.Move(direction * movementSpeed * Time.deltaTime);
+    }
+
+    void UpdateAnimator()
+    {
         anim.SetBool("isWalk",isWalk);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        switch(other.gameObject.tag)
-        {
-            case "Cam Trigger":
-                print("upper");
-                camB.SetActive(true);
-            break;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        switch(other.gameObject.tag)
-        {
-            case "Cam Trigger":
-                print("down");
-                camB.SetActive(false);
-            break;
-        }
-    }
+    #endregion
+
+
 
 }
