@@ -69,9 +69,9 @@
     <Compile Include="Assets\BTM_Assets\BTM_Items_Gems\Scripts\SimpleGemsAnim.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Nicrom\Shaders\Wind\Documentation\LPW_Log.txt" />
-    <None Include="Assets\Nicrom\Shaders\Wind\Assets\Shaders\ASE\LPW_Vegetation.shader" />
-    <None Include="Assets\Nicrom\Shaders\Wind\Assets\Shaders\ASE\LPW_Vegetation_Transparent.shader" />
+    <None Include="Assets\AssetPackage\Nicrom\Shaders\Wind\Documentation\LPW_Log.txt" />
+    <None Include="Assets\AssetPackage\Nicrom\Shaders\Wind\Assets\Shaders\ASE\LPW_Vegetation.shader" />
+    <None Include="Assets\AssetPackage\Nicrom\Shaders\Wind\Assets\Shaders\ASE\LPW_Vegetation_Transparent.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
