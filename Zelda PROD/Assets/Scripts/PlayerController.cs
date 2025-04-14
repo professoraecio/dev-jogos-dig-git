@@ -15,8 +15,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack Config")]
     public ParticleSystem fxAttack;
-    [SerializeField]
+    public Transform hitBox;
+    [Range(0.2f,1f)]
+    public float hitRange = 0.5f;
+    public LayerMask hitMask;
     public bool isAttack;
+    // Objetos que possivelmente entraram em minha area de colisao
+    public Collider[] hitInfo;
+    public int amountDmg;
     // Start is called before the first frame update
 
     void Start()
@@ -55,6 +61,11 @@ public class PlayerController : MonoBehaviour
         isAttack = true;
         anim.SetTrigger("Attack");
         fxAttack.Emit(10);
+        hitInfo = Physics.OverlapSphere(hitBox.position,hitRange,hitMask);
+        foreach(Collider c in hitInfo)
+        {
+            c.gameObject.SendMessage("GetHit",amountDmg,SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     void AttackIsDone()
@@ -87,6 +98,14 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
-
+    private void OnDrawGizmosSelected()
+    {
+        if(hitBox != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(hitBox.position,hitRange);
+        }
+        
+    }
 
 }

@@ -370,6 +370,7 @@
 "Assets/BTM_Assets/BTM_Items_Gems/Scripts/SimpleGemsAnim.cs"
 "Assets/Scripts/Animator/attackIsDone.cs"
 "Assets/Scripts/DynamicCam.cs"
+"Assets/Scripts/Grass.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
