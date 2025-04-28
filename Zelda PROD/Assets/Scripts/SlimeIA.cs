@@ -8,6 +8,7 @@ public class SlimeIA : MonoBehaviour
     public ParticleSystem hitEffect;
     public int HP = 3;
     public bool isDie = false;
+    public enemyState state;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class SlimeIA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StateManager();
     }
 
     IEnumerator Died()
@@ -46,6 +47,34 @@ public class SlimeIA : MonoBehaviour
             StartCoroutine("Died");
         }
         
+    }
+    void StateManager()
+    {
+        switch(state)
+        {
+            case enemyState.IDLE:
+            break;
+            case enemyState.ALERT:
+            break;
+            case enemyState.EXPLORE:
+            break;
+            case enemyState.FOLLOW:
+            break;
+            case enemyState.FURY:
+            break;
+            case enemyState.PATROL:
+            break;
+        }
+    }
+    void ChangeState(enemyState newState)
+    {
+        switch(newState)
+        {
+            case enemyState.IDLE:
+            break;
+            case enemyState.ALERT:
+            break;
+        }
     }
     #endregion
 }
