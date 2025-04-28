@@ -525,6 +525,131 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &980571710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1672984785010509267}
+    m_Modifications:
+    - target: {fileID: 2094860028941310665, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2293660243166399619, guid: 699647ff1cf844e46bccf0cc1164aef3,
+        type: 3}
+      propertyPath: m_Name
+      value: FX_Blood_Burst
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 699647ff1cf844e46bccf0cc1164aef3, type: 3}
+--- !u!4 &980571711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2288367516023406501, guid: 699647ff1cf844e46bccf0cc1164aef3,
+    type: 3}
+  m_PrefabInstance: {fileID: 980571710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &980571712 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2095139251513604141, guid: 699647ff1cf844e46bccf0cc1164aef3,
+    type: 3}
+  m_PrefabInstance: {fileID: 980571710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1043680024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002619571256033225}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BottomEyeCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1233,12 +1358,13 @@ Transform:
   m_GameObject: {fileID: 2052641290232733545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: -2.71}
+  m_LocalPosition: {x: 0, y: 0.5, z: -2.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2983701208806303746}
   - {fileID: 1311661904260860914}
+  - {fileID: 980571711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760046036511442512
@@ -1250,7 +1376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2983701208806303746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1285,13 +1411,53 @@ GameObject:
   m_Component:
   - component: {fileID: 1672984785010509267}
   - component: {fileID: 1206150722889781057}
-  m_Layer: 0
-  m_Name: SlimePolyart
+  - component: {fileID: 2052641290232733546}
+  - component: {fileID: 2052641290232733547}
+  m_Layer: 7
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2052641290232733546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052641290232733545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07e393726defed4db8ef124c9439ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 980571712}
+  HP: 3
+  isDie: 0
+--- !u!136 &2052641290232733547
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052641290232733545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!137 &2066896391604552992
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -3162,10 +3328,10 @@ MonoBehaviour:
   hitRange: 0.5
   hitMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   isAttack: 0
   hitInfo: []
-  amountDmg: 0
+  amountDmg: 1
 --- !u!4 &2066896391618647104
 Transform:
   m_ObjectHideFlags: 0
@@ -8671,7 +8837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1793626186959302575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8720,7 +8886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5520301006029961520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UpperEyeCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8736,7 +8902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4139091802137722409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Side_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9020,7 +9186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8094984398072115631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EyeCTRL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33708,7 +33874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4905048949732058504}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33724,7 +33890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9038994504740429743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Side_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33864,7 +34030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4375295704429741324}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Crown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33880,7 +34046,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7846665267651019447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EyeBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33897,7 +34063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311661904260860914}
   - component: {fileID: 3893724830785950053}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}

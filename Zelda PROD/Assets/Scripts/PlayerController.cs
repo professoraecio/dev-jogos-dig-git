@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool isAttack;
     // Objetos que possivelmente entraram em minha area de colisao
     public Collider[] hitInfo;
-    public int amountDmg;
+    public int amountDmg = 1;
     // Start is called before the first frame update
 
     void Start()

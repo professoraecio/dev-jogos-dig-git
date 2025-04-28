@@ -372,6 +372,7 @@
 "Assets/Scripts/DynamicCam.cs"
 "Assets/Scripts/Grass.cs"
 "Assets/Scripts/PlayerController.cs"
+"Assets/Scripts/SlimeIA.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 /deterministic
