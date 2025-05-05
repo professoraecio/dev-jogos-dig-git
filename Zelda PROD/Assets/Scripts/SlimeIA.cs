@@ -9,10 +9,14 @@ public class SlimeIA : MonoBehaviour
     public int HP = 3;
     public bool isDie = false;
     public enemyState state;
+    public const float idleWaitTime = 3f;
+    public const float patrolWaitTime = 5f;
+    private int rand;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        ChangeState(state);
     }
 
     // Update is called once per frame
@@ -68,13 +72,39 @@ public class SlimeIA : MonoBehaviour
     }
     void ChangeState(enemyState newState)
     {
-        switch(newState)
+        state = newState;
+        print(newState);
+        StopAllCoroutines();
+        switch(state)
         {
             case enemyState.IDLE:
+                StartCoroutine("IDLE");
             break;
             case enemyState.ALERT:
+                StartCoroutine("PATROL");
             break;
         }
     }
+
+    IEnumerator IDLE()
+    {
+        yield return new WaitForSeconds(idleWaitTime);
+
+        if(Rand() <= 50)
+        {
+            ChangeState(enemyState.IDLE);
+        }
+        else
+        {
+            ChangeState(enemyState.PATROL);
+        }
+    }
+
+    int Rand()
+    {
+        rand = Random.Range(0,100);
+        return rand;
+    }
+
     #endregion
 }
