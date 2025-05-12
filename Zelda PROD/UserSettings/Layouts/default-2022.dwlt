@@ -815,9 +815,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -17.98713, y: -58.590267, z: -47.95202}
+    m_Target: {x: -34.340096, y: -38.03612, z: -58.551506}
     speed: 2
-    m_Value: {x: -17.98713, y: -58.590267, z: -47.95202}
+    m_Value: {x: -34.340096, y: -38.03612, z: -58.551506}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -863,13 +863,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0798132, y: 0.8948506, z: -0.40155995, w: -0.17785662}
+    m_Target: {x: -0.07001225, y: 0.9292579, z: -0.23659559, w: -0.27497527}
     speed: 2
-    m_Value: {x: -0.07981275, y: 0.8948456, z: -0.4015577, w: -0.17785563}
+    m_Value: {x: -0.07042424, y: 0.9288969, z: -0.2379879, w: -0.27486843}
   m_Size:
-    m_Target: 42.370903
+    m_Target: 42.19948
     speed: 2
-    m_Value: 40.546318
+    m_Value: 42.19948
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1002,14 +1002,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1.0567245
+    - e00: 1.0775727
       e01: 0
       e02: 0
-      e03: 10.78799
+      e03: 124.97643
       e10: 0
-      e11: 1.0567245
+      e11: 1.0775727
       e12: 0
-      e13: 7.8534517
+      e13: 137.95882
       e20: 0
       e21: 0
       e22: 1
@@ -1019,10 +1019,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: b60dc9aa529b314489f628aa3b57c470,
+  m_AnimatorController: {fileID: 9100000, guid: 9bbcf96c9a254c5ba654027c656d7b39,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107905649089028422, guid: b60dc9aa529b314489f628aa3b57c470,
+  - m_Target: {fileID: 1107040346203751106, guid: 9bbcf96c9a254c5ba654027c656d7b39,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}

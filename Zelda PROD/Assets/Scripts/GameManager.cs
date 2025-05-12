@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Transform[] slimeWayPoints;
     public float slimeDistanceToAttack = 2.3f;
     public float slimeAlertTime = 3f;
+    public float slimeAttackDelay = 1f;
     // Start is called before the first frame update
     void Start()
     {

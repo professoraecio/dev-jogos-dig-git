@@ -20,6 +20,7 @@ public class SlimeIA : MonoBehaviour
     private bool isWalk;
     private bool isAlert;
     private bool isPlayerVisible;
+    private bool isAttack;
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +105,10 @@ public class SlimeIA : MonoBehaviour
             case enemyState.FOLLOW:
                 destination = _gm.player.position;
                 agent.destination = destination;
+                if(agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    Attack();
+                }
             break;
             case enemyState.FURY:
                 destination = _gm.player.position;
@@ -112,6 +117,7 @@ public class SlimeIA : MonoBehaviour
             case enemyState.PATROL:
             break;
         }
+        //state = newState;
     }
     void ChangeState(enemyState newState)
     {
@@ -144,7 +150,10 @@ public class SlimeIA : MonoBehaviour
                 
             break;
             case enemyState.FOLLOW:
+                isAttack = true;
                 agent.stoppingDistance = _gm.slimeDistanceToAttack;
+                StartCoroutine("FOLLOW");
+                StartCoroutine("ATTACK");
             break;
             case enemyState.FURY:
                 destination = transform.position;
@@ -190,6 +199,12 @@ public class SlimeIA : MonoBehaviour
         }
     }
 
+    IEnumerator ATTACK()
+    {
+        yield return new WaitForSeconds(_gm.slimeAttackDelay);
+        isAttack = false;
+    }
+
     void StayStill(int yes)
     {
         if(Rand() <= yes)
@@ -206,6 +221,21 @@ public class SlimeIA : MonoBehaviour
     {
         rand = Random.Range(0,100);
         return rand;
+    }
+
+    void Attack()
+    {
+        if(isAttack == false)
+        {
+            isAttack = true;
+            anim.SetTrigger("Attack");
+        }
+    }
+
+    void AttackIsDone()
+    {
+        //isAttack = false;
+        StartCoroutine("ATTACK");
     }
 
     #endregion
