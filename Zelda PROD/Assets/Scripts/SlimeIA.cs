@@ -42,6 +42,7 @@ public class SlimeIA : MonoBehaviour
             isWalk = false;
         }
         anim.SetBool("isWalk",isWalk);
+        anim.SetBool("isAlert",isAlert);
     }
 
     IEnumerator Died()
@@ -49,6 +50,14 @@ public class SlimeIA : MonoBehaviour
         isDie = true;
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player" && (state == enemyState.IDLE || state == enemyState.PATROL))
+        {
+            ChangeState(enemyState.ALERT);
+        }
     }
 
     #region 
@@ -107,6 +116,10 @@ public class SlimeIA : MonoBehaviour
                 StartCoroutine("IDLE");
             break;
             case enemyState.ALERT:
+                agent.stoppingDistance = 0;
+                destination = transform.position;
+                agent.destination = destination;
+                isAlert = true;
             break;
             case enemyState.PATROL:
                 agent.stoppingDistance = 0;
