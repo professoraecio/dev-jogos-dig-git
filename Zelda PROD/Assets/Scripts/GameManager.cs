@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum enemyState
 {
-    IDLE, ALERT, EXPLORE, PATROL, FOLLOW, FURY
+    IDLE, ALERT, PATROL, FOLLOW, FURY
 }
 
 public class GameManager : MonoBehaviour
@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public float slimeIdleWaitTime;
     public Transform[] slimeWayPoints;
     public float slimeDistanceToAttack = 2.3f;
+    public float slimeAlertTime = 3f;
     // Start is called before the first frame update
     void Start()
     {
