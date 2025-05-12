@@ -101,8 +101,10 @@ public class SlimeIA : MonoBehaviour
             case enemyState.ALERT:
                 destination = _gm.player.position;
                 agent.destination = destination;
+                LookAt();
             break;
             case enemyState.FOLLOW:
+                LookAt();
                 destination = _gm.player.position;
                 agent.destination = destination;
                 if(agent.remainingDistance <= agent.stoppingDistance)
@@ -111,6 +113,7 @@ public class SlimeIA : MonoBehaviour
                 }
             break;
             case enemyState.FURY:
+                LookAt();
                 destination = _gm.player.position;
                 agent.destination = destination;
             break;
@@ -225,7 +228,7 @@ public class SlimeIA : MonoBehaviour
 
     void Attack()
     {
-        if(isAttack == false)
+        if(isAttack == false && isPlayerVisible == true)
         {
             isAttack = true;
             anim.SetTrigger("Attack");
@@ -236,6 +239,16 @@ public class SlimeIA : MonoBehaviour
     {
         //isAttack = false;
         StartCoroutine("ATTACK");
+    }
+
+    void LookAt()
+    {
+        if(isAttack == true){return;}
+        Vector3 lookDirection = (_gm.player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(lookDirection);
+        transform.rotation = 
+        Quaternion.Slerp(transform.rotation,
+        lookRotation,_gm.slimeLookAtSpeed * Time.deltaTime);
     }
 
     #endregion

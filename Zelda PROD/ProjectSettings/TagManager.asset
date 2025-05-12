@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cam Trigger
+  - TakeDamage
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - UI
   - hitLayer
   - Enemy
-  - 
-  - 
+  - TakeDamage
+  - Player
   - 
   - 
   - 

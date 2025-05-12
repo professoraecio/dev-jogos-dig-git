@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalk;
     private CharacterController controller;
     [Header("Config Player")]
+    public int HP = 3;
     public float movementSpeed = 3f;
     private Vector3 direction;
     private float horizontal;
@@ -106,6 +107,27 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawWireSphere(hitBox.position,hitRange);
         }
         
+    }
+
+    void GetHit(int amount)
+    {
+        HP -= amount;
+        if(HP > 0)
+        {
+            anim.SetTrigger("Hit");
+        }
+        else
+        {
+            anim.SetTrigger("Die");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "TakeDamage")
+        {
+            GetHit(1);
+        }
     }
 
 }
